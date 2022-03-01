@@ -1,13 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const UserRouter = require("./src/routes/user.route");
-const ticketRouter = require("./src/routes/train.route");
-const AdminRouter = require("./src/routes/admin.route");
+const UserRouter = require("./routes/user.route");
+const ticketRouter = require("./routes/train.route");
+const AdminRouter = require("./routes/admin.route");
 
 require("dotenv").config();
 
 const app = express();
-const PORT = 4000;
+const port = process.env.PORT;
 
 app.use(express.json());
 
@@ -30,10 +30,16 @@ const connectDB = async () => {
 
 connectDB();
 
+app.get("/", (req, res) => {
+  res.send({
+    message: "Welcome Home Page",
+  });
+});
+
 app.use("/api/v1", UserRouter);
 app.use("/api/v1", ticketRouter);
 app.use("/api/v1", AdminRouter);
 
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
