@@ -32,7 +32,7 @@ connectDB();
 
 app.get("/", (req, res) => {
   res.send({
-    message: "Welcome Home Page",
+    message: "You're a Badass Hacker",
   });
 });
 

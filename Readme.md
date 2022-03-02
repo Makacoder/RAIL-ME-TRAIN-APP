@@ -12,6 +12,12 @@ In this pattern, we show how to create endpoints to differenciate between Users 
 ### Postman Documentation
 [Rail-Me Train APP](https://documenter.getpostman.com/view/19468470/UVksLEJJ)
 
+### Heroku Documentation
+https://fathomless-beyond-10355.herokuapp.com/
+
+#### Developer Documentation
+Twitter: https://www.twitter.com/makamakanaki
+Linkedin: https://www.linkedin.com/in/makacoder
 
 Copyright(c) 2000 - 2022 Maka Inc.
 All rights reserved.
