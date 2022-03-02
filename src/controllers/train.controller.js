@@ -54,7 +54,6 @@ exports.updateTrainTime = async (req, res, next) => {
       updateTrainTime,
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).json({
       success: false,
       message: error.message,
@@ -69,9 +68,9 @@ exports.deleteBooking = async (req, res, next) => {
     const deleteBooking = await bookATrain.findOneAndDelete({ _id });
     return res.status(200).json({
       message: `This booking has been cancelled`,
+      deleteBooking,
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).json({
       success: false,
       message: error.message,
@@ -87,7 +86,6 @@ exports.totalBookings = async (req, res, next) => {
       totalBooking,
     });
   } catch (error) {
-    console.log(error);
     return res.status(500).json({
       success: false,
       message: error.message,
